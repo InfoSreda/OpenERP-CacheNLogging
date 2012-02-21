@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="cache_log_form" model="ir.ui.view">
+			<field name="name">cache.log.form</field>
+			<field name="model">cache.log</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form>
+					<field name="model_id"/>
+					<field name="per_user"/>
+					<field name="without_data"/>
+					<field name="last_modified"/>
+				</form>
+			</field>
+		</record>
+		
+		<record id="cms_site_tree" model="ir.ui.view">
+			<field name="name">cache.log.tree</field>
+			<field name="model">cache.log</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="model_id"/>
+					<field name="per_user"/>
+					<field name="without_data"/>
+					<field name="last_modified"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="cache_log_action" model="ir.actions.act_window">
+			<field name="name">cache.log.action</field>
+			<field name="res_model">cache.log</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		
+		<menuitem action="cache_log_action" id="cache_log_menuitem" name="Cache Settings" parent="base.menu_config"/>
+	
+	</data>
+</openerp>
